@@ -14,12 +14,13 @@ class NewsListViewBuilder extends StatefulWidget {
 }
 
 class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
-  var future;
+// ignore: prefer_typing_uninitialized_variables
+var  future;
   @override
   void initState() {
-    // TODO: implement initState
+    
     super.initState();
-    future = NewsService(Dio()).getTopHeadlines(category: widget.category);
+   future = NewsService(Dio()).getTopHeadlines(category: widget.category);
   }
 
   @override
